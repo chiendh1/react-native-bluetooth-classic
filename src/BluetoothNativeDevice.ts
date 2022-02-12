@@ -1,4 +1,4 @@
-import { EmitterSubscription } from 'react-native';
+import { EmitterSubscription, ImageSourcePropType } from 'react-native';
 import { BluetoothEventListener, BluetoothDeviceReadEvent } from './BluetoothEvent';
 
 /**
@@ -44,5 +44,8 @@ export default interface BluetoothNativeDevice {
      * or other details.
      */
     extra: Map<string,Object>;
+
+    img?:  ImageSourcePropType;
+    imgDeviceFound?: ImageSourcePropType;
 
 }

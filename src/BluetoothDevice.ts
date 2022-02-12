@@ -7,6 +7,7 @@ import {
   BluetoothEventSubscription,
 } from "./BluetoothEvent";
 import { StandardOptions } from "./BluetoothNativeModule";
+import { ImageSourcePropType } from "react-native";
 
 /**
  * Implements the BluetoothNativeDevice which is used to communicate with the Android
@@ -24,6 +25,8 @@ export default class BluetoothDevice implements BluetoothNativeDevice {
   id: string;
   bonded?: Boolean;
   deviceClass?: string;
+  img?:  ImageSourcePropType;
+  imgDeviceFound?: ImageSourcePropType;
   rssi: Number;
   extra: Map<string, Object>;
 
